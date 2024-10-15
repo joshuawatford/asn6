@@ -1,0 +1,36 @@
+<style>
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    body{
+        background-color: #0d1319;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h1{
+        color: #6b8c91;
+        font-size: 3em;
+        text-align: center;
+    }
+    h4{
+        color: #283a48;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    p{
+        text-align: right;
+        border-top: 4px dashed #2d3532;
+        color: #4d616a;
+        line-height: 5;
+        margin-bottom: 1em;
+    }
+    a{
+        color: #4d616a;
+    }
+img{
+  float: left;
+  border: 6px solid #1e242a;
+}
+</style>

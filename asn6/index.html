@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 6</title>
+</head>
+<form>
+  <fieldset id="userauth">
+    <legend>Login</legend>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="user passowrd">
+  </fieldset>
+
+
+  
+  <fieldset id="userinfo">
+    <legend>Personal Information</legend>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="first name">
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="last name">
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" id="phone_number" name="user phone number">
+  </fieldset>
+
+
+  
+  <fieldset id="schedule" >
+    <legend>Schedule an appointment</legend>
+    <input type="date">
+    <input type="time">
+  </fieldset>
+
+
+  
+  <fieldset id="specs">
+  <legend>Specifications</legend>
+    <p>What is your maximum budget?</p>
+    <span id="minValue">$50</span>
+    <input type="range" id="budget" name="budget" min="50" max="300" value="50">
+    <span id="maxValue">$300</span>
+
+    
+    <p>Will you be removing an old set?</p>
+    <label for="yes">Yes</label>
+    <input type="radio" id="yes" name="choice">
+    <label for="no">No</label>
+    <input type="radio" id="no" name="choice">
+    <p></p>
+
+    
+    <label for="select">What type of set would you like to get?</label>
+    <select id="select">
+      <option>Please Select an Option</option>
+      <option>Acrylic</option>
+      <option>Gel Polish</option>
+      <option>Polygel</option>
+      <option>Nail Lacquer</option>
+      <option>Dip Powder</option>
+    </select>
+
+    
+    <p>What kind of nail treatments would you like?</p>
+    <label for="cuticle">Premium Cuticle Oil</label>
+    <input type="checkbox" id="cuticle" name="checkbox">
+    <label for="grow">Nail Growth Treatment</label>
+    <input type="checkbox" id="grow" name="checkbox">
+    <label for="strong">Nail Strengthener</label>
+    <input type="checkbox" id="strong" name="checkbox">
+    <p></p>
+
+    
+    <label for="color">What color would you like as a base?</label>
+    <input type="color" id="color" name="basecolor">
+    <p></p>
+
+    
+    <label for="file">Optionally, provide photo inspiration for your set:</label>
+    <input type="file" id="file" name="file input">
+    <p></p>
+
+    
+    <label for="comments">Provide any additional comments for your manicurist:</label>
+    <textarea id="comments"></textarea>
+  </fieldset>
+
+
+  <div class="container"><input type="submit" id="submit" name="submit">
+  <input type="reset" id="reset" name="reset"></div> 
+</form>
+</html>
