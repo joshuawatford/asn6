@@ -20,14 +20,7 @@ changeThisPageFunc = function() {
    phone_number = document.createElement("li");
    phone_number.textContent = document.querySelector('#phone_number').value;
    userInput.appendChild(phone_number);
-   /*/grabbing date
-   date = document.createElement("li");
-   date.textContent = document.querySelector('#date').value;
-   userInput.appendChild(date);
-   //grabbing time
-   time = document.createElement("li");
-   time.textContent = document.querySelector('#time').value;
-   userInput.appendChild(time);*/
+   
    //grabbing budget
    budget = document.createElement("li");
    budget.textContent = document.querySelector('#budget').value;
@@ -40,10 +33,23 @@ changeThisPageFunc = function() {
    select = document.createElement("li");
    select.textContent = document.querySelector('#select').value;
    userInput.appendChild(select);
-   /*/grabbing checkbox
+   //grabbing checkboxes cuticle, grow, strong
    checkbox = document.createElement("li");
-   checkbox.textContent = document.querySelector('#checkbox').value;
-   userInput.appendChild(checkbox);*/
+   checkbox.textContent = document.querySelector('#cuticle').value;
+   if(checkbox.checked){
+      checkbox.textContent = "Requesting Premimum Cuticle Oil";
+      userInput.appendChild(checkbox);
+   }
+   checkbox.textContent = document.querySelector('#grow').value;
+   if(checkbox.checked){
+      checkbox.textContent = "Requesting Nail Growth Treatment";
+      userInput.appendChild(checkbox);
+   }
+   checkbox.textContent = document.querySelector('#strong').value;
+   if(checkbox.checked){
+      checkbox.textContent = "Requesting Nail Strengthener";
+      userInput.appendChild(checkbox);
+   }
    //grabbing color
    color = document.createElement("li");
    color.textContent = document.querySelector('#color').value;
