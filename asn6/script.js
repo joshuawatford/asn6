@@ -25,31 +25,22 @@ changeThisPageFunc = function() {
    budget = document.createElement("li");
    budget.textContent = document.querySelector('#budget').value;
    userInput.appendChild(budget);
-   /*/grabbing choice
-   choice = document.createElement("li");
-   choice.textContent = document.querySelector('#choice').value;
-   userInput.appendChild(choice);*/
+   //grabbing choice
+   let choice = document.createElement("li");
+   let selectedChoice = document.querySelector('input[name="choice"]:checked');
+   choice.textContent = selectedChoice ? (selectedChoice.id === "yes" ? "Fresh manicure on bare nails" : "Removing old manicure before new set.") : "No choice selected";
+   userInput.appendChild(choice);
    //grabbing select
    select = document.createElement("li");
    select.textContent = document.querySelector('#select').value;
    userInput.appendChild(select);
-   //grabbing checkboxes cuticle, grow, strong
-   checkbox = document.createElement("li");
-   checkbox.textContent = document.querySelector('#cuticle').value;
-   if(checkbox.checked){
-      checkbox.textContent = "Requesting Premimum Cuticle Oil";
-      userInput.appendChild(checkbox);
-   }
-   checkbox.textContent = document.querySelector('#grow').value;
-   if(checkbox.checked){
-      checkbox.textContent = "Requesting Nail Growth Treatment";
-      userInput.appendChild(checkbox);
-   }
-   checkbox.textContent = document.querySelector('#strong').value;
-   if(checkbox.checked){
-      checkbox.textContent = "Requesting Nail Strengthener";
-      userInput.appendChild(checkbox);
-   }
+   //grabbing checkboxes
+   let checkedBoxes = document.querySelectorAll('input[name="checkbox"]:checked');
+   checkedBoxes.forEach(checkbox => {
+       let checkboxItem = document.createElement("li");
+       checkboxItem.textContent = checkbox.id; 
+       userInput.appendChild(checkboxItem);
+   });
    //grabbing color
    color = document.createElement("li");
    color.textContent = document.querySelector('#color').value;
@@ -62,7 +53,16 @@ changeThisPageFunc = function() {
    comments = document.createElement("li");
    comments.textContent = document.querySelector('#comments').value;
    userInput.appendChild(comments);
-   document.body.innerHTML = userInput.outerHTML;
+   const outputContainer = document.getElementById("output");
+   if (!outputContainer) {
+       const newContainer = document.createElement("div");
+       newContainer.id = "output";
+       newContainer.appendChild(userInput);
+       document.body.appendChild(newContainer);
+   } else {
+       outputContainer.innerHTML = ""; // Clear previous output
+       outputContainer.appendChild(userInput);
+   }
    
 }
       
